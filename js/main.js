@@ -16,24 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.add('active');
     });
     
-    // Mobile menu toggle
-    const mobileMenuBtn = document.createElement('div');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    
-    const header = document.querySelector('header');
-    const nav = document.querySelector('nav');
-    
-    if (header && nav) {
-        header.insertBefore(mobileMenuBtn, nav);
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-bars');
-            this.querySelector('i').classList.toggle('fa-times');
-        });
-    }
-    
     // Add active class to current page in navigation
     const currentLocation = window.location.pathname;
     const navLinks = document.querySelectorAll('nav ul li a');
